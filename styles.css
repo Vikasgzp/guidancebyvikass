@@ -1,0 +1,296 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    padding-bottom: 150px; /* Add padding to prevent content from being hidden behind the footer */
+  }
+  
+  nav {
+    background-color: #0077b6;
+    padding: 10px;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  nav ul li {
+    margin-right: 20px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  #home {
+    text-align: center;
+    padding: 50px 20px;
+  }
+
+  /* Navigation Bar */
+nav {
+  background-color: #0077b6;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo a {
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-links li {
+  margin-right: 20px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #ff6b6b;
+}
+
+.hamburger {
+  display: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #0077b6;
+    position: absolute;
+    top: 60px;
+    left: 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+
+
+  .back-button {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    font-size: 18px; /* Slightly larger font */
+    font-weight: 600; /* Bold text */
+    padding: 12px 24px; /* Padding for better button size */
+    border-radius: 50px; /* Rounded corners */
+    border: none; /* No border */
+    text-align: center; /* Centered text */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: all 0.3s ease; /* Smooth transition */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow effect */
+  }
+
+  .back-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+    transform: translateY(-4px); /* Slight lift effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Deeper shadow on hover */
+  }
+  
+  .exam-buttons button {
+    background-color: #00b4d8;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .exam-buttons button:hover {
+    background-color: #0096c7;
+  }
+  
+  #exam-page {
+    padding: 20px;
+    text-align: center;
+    position: relative;
+  }
+  
+  .exam-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .steps button {
+    background-color: #023e8a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .steps button:hover {
+    background-color: #0077b6;
+  }
+  
+  #step-content {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .right-photo {
+    position: fixed;
+    top: 20%;
+    right: 20px;
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .right-photo img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  /* Footer Styling */
+  footer {
+    background-color: #0077b6;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    position: relative; /* Keep this for natural flow */
+    margin-top: 20px; /* Add space above the footer */
+    width: 100%;
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* About Me Section */
+  .about-me {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    text-align: left;
+  }
+  
+  .about-me h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: white;
+  }
+  
+  .author-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .author-details {
+    flex: 1;
+  }
+  
+  .author-details p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: white;
+  }
+  
+  .author-details strong {
+    color: #00b4d8;
+  }
+  
+  .author-photo img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid #00b4d8;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Social Media Icons */
+  .social-media {
+    margin: 20px 0;
+  }
+  
+  .social-media a {
+    margin: 0 10px;
+    color: white;
+    font-size: 24px;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .social-media a:hover {
+    color: #00b4d8;
+    transform: scale(1.2);
+  }
+  
+  /* Copyright Notice */
+  footer p {
+    margin: 5px 0;
+    font-size: 14px;
+  }
+
+
+  h1, h2, h3 {
+    font-weight: bold;
+  }
+  
+  b {
+    font-weight: bold;
+  }
+  

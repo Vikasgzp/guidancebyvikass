@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Guidance Blog</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style2.css">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <!-- Navigation Menu -->
+  <nav>
+    <div class="nav-container">
+      <!-- Logo -->
+      <div class="logo">
+        <a href="#home">Student Guidance</a>
+      </div>
+      <!-- Navigation Links -->
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#exams">Exams</a></li>
+        <li><a href="#resources">Resources</a></li>
+        <li><a href="#contact" id="contact-link">Contact</a></li>
+      </ul>
+      <!-- Hamburger Menu for Mobile -->
+      <div class="hamburger" id="hamburger">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Contact Popup Modal -->
+  <div id="contact-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h2>Contact Me</h2>
+      <p>If you have any questions, feel free to connect with me via email or phone or it would be better that simply messege me on email vikasfone@gmail.com </p>
+      <form id="contact-form">
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" placeholder="Type your message here..." rows="4" required></textarea>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+
+  <!-- Home Page -->
+  <section id="home">
+    <h1>Welcome to Student Guidance</h1>
+    <p>Choose an exam to get started:</p>
+    <div class="exam-buttons">
+      <button onclick="loadExam('jee')">JEE</button>
+      <button onclick="loadExam('neet')">NEET</button>
+      <button onclick="loadExam('upsc')">UPSC</button>
+    </div>
+  </section>
+
+  <!-- Exam Page (Dynamically Loaded) -->
+  <section id="exam-page" style="display: none;">
+    <button onclick="goBackToHome()" class="back-button">Back to Home</button>
+    <h2 id="exam-title"></h2>
+    <div class="exam-content">
+      <div class="steps">
+        <button onclick="showStep('qualification')">Basic Qualification</button>
+        <button onclick="showStep('career')">Career Options</button>
+        <button onclick="showStep('description')">Description</button>
+      </div>
+      <!-- Language Toggle -->
+      <select id="language-select" onchange="changeLanguage()">
+        <option value="english">English</option>
+        <option value="hindi">Hindi</option>
+        <option value="punjabi">Punjabi</option>
+        <option value="bhojpuri">Bhojpuri</option>
+        <option value="hinglish">Hinglish</option>
+      </select>
+      <div id="step-content">
+        <!-- Content will be loaded here dynamically -->
+      </div>
+    </div>
+    <!-- Right-Side Photo -->
+    <!-- <div class="right-photo">
+      <img src="vikas.jpg" alt="Vikas Photo">
+    </div> -->
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <!-- About Me Section -->
+      <div class="about-me">
+        <h3>Author</h3>
+        <div class="author-info">
+          <div class="author-details">
+            <p><strong>Name:</strong> Vikas Kushwaha</p>
+            <p><strong>Education:</strong> CSE Engineer 2027, NIT Jalandhar (Punjab)</p>
+            <p><strong>Intermediate:</strong> Government City Inter College, Ghazipur (UP)</p>
+          </div>
+          <div class="author-photo">
+            <img src="vikas1.png" alt="Vikas Kushwaha">
+          </div>
+        </div>
+      </div>
+
+      <!-- Social Media Links -->
+      <div class="social-media">
+        <a href="https://www.facebook.com/profile.php?id=100029116901389" target="_blank">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a href="https://www.instagram.com/vikaskushwahagzp?igsh=MW1tYWM1ZjZkcnp5eQ==" target="_blank">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/vikas-kushwaha-b897a9293?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+        <a href="https://x.com/Vikasjigzp?t=scABjETR5GA09UvuAyLYRw&s=09" target="_blank">
+          <i class="fa-brands fa-twitter"></i>
+        </a>
+      </div>
+
+      <!-- Copyright Notice -->
+      <p>&copy; 2023 Student Guidance Blog. All rights reserved.</p>
+      <p>Made with ❤️ by Vikas</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="script2.js"></script>
+</body>
+</html>
